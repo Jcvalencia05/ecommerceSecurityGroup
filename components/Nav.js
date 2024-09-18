@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function Nav() {
+export default function Nav(show) {
 
     const inactiveLink ='flex gap-1 p-1';
-    const activeLink = inactiveLink +'bg-white text-black';
+    const activeLink = inactiveLink +'bg-white text-black rounded-sm';
     const router = useRouter();
     const {pathname} = router;
 
