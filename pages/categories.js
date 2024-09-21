@@ -35,13 +35,15 @@ function Categories({ swal }) {
             showCancelButton: true,
             cancelButton: 'Cancelar',
             confirmButton: 'Si',
-            confirmButtonColor: '#008000'
+            confirmButtonColor: '#dc2626',
+            reverseButtons: true,
         }).then(async result => {
             if (result.isConfirmed) {
                 const { _id } = category;
                 await axios.delete('/api/categories?_id=' + _id)
+                fetchCategories();
             }
-            fetchCategories();
+            
         });
     }
 
@@ -225,5 +227,5 @@ function Categories({ swal }) {
             )}
 
         </Layout>
-    )
+    );
 }
