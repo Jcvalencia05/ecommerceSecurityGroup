@@ -6,7 +6,7 @@
 img{
     max-height: 100%;
 }
-input, textarea{
+input, textarea, select{
     @apply border border-black rounded-md px-1 w-full;
     @apply mb-2;
 }
@@ -16,13 +16,17 @@ input:focus, textarea:focus{
 h1{
     @apply text-black mb-2 text-xl;
 }
+label{
+    @apply text-black text-sm;
+}
 .btn-primary{
     @apply bg-red-500 text-white px-4 py-1 rounded-md;
 }
 table.basic{
     @apply w-full;
 }
-table.basic thead tr td{
+table.basic thead tr td,
+table.basic thead tr th{
     @apply bg-red-50;
 }
 table.basic tr td{
